@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>New Country</h1>
+
+    <form action="/countries" method="post">
+
+        <label for="country_name">Country's Name:</label>
+            <input type="text" name="country_name" id="country_name">
+            <p></p>
+        <label for="continent">Continent:</label>
+            <select name="continent" id="continent">
+                <option value="Africa">Africa</option>
+                <option value="America">America</option>
+                <option value="Antartica">Antartica                </option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        <p></p>
+        <label for="img_url">Image Link</label>
+            <input type="url" name="img_url" id="img_url">
+        <p></p>
+        <label for="reason">Reason</label>
+            <input type="text" name="reason" id="reason">
+        <p></p>
+        <label for="reflection">Reflections</label>
+            <input type="text" name="reflection" id="reflection">
+<p></p>
+        <input class="btn btn--action" type='submit' value="Add Country">
+    </form>
+
+
+    {% endblock %}

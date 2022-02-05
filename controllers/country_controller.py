@@ -25,7 +25,7 @@ def create_country():
     continent = request.form['continent']
     img_url = request.form['img_url']
     reason = request.form['reason']
-    reflection = request.form['refelction']
+    reflection = request.form['reflection']
     country = Country(country_name, continent, img_url, reason, reflection)
     country_repository.new_country(country)
     return redirect('/countries')

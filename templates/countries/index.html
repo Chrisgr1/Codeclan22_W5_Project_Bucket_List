@@ -1,13 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
 <div>
-<h1> Countries</h1>
-<p>Let's see: 
-    
-    {% for country in countries %}
-    <a href="/countries/{{ country.id }}">{{country.country_name}}</a>
-    {% endfor %}
+<h1> View Countries</h1>
 
+    <table>
+        <tr>
+            <td>
+                <tr>
+                    Countries to see
+                    
+                </tr>
+                    {% for country in countries %}
+                <tr>
+                    <td><a href="/countries/{{ country.id }}"> {{country.country_name}} </a> </td>
+                    <td> {{ country.continent }} </td>
+                </tr>
+                <tr> 
+                    <td> {{country.reflection }} </td>
+                    <td> {{country.reason }} </td>
+
+
+                </tr>
+            </td>
+            <td>
+                <img src="{{country.img_url}}" alt="this  should be a pic">
+            </td>
+                {% endfor %}
+        </tr>
+    </table>
 
 </p>
 

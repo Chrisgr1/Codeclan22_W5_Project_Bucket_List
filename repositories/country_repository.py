@@ -21,3 +21,4 @@ def select_all():
         country = Country(row['country_name'], row['continent'], row['img_url'], row['reason'], row['reflection'], row['id'])
         countries.append(country)
     return countries
+
