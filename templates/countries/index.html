@@ -1,17 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
+<div>
 <h1> Countries</h1>
-
-<table>
-    <tr>
-        <th>name</th>
-    </tr>
-    <tr>
-        <td>
-        {% for country in countries %}
-    <tr>
-    <td><a href="/countries/{{ country.id }}"> {{country.country_name}} </a></td>
-    </tr>
+<p>Let's see: 
+    
+    {% for country in countries %}
+    <a href="/countries/{{ country.id }}">{{country.country_name}}</a>
     {% endfor %}
-</table>
+
+
+</p>
+
 {% endblock %}

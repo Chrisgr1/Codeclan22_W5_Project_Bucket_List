@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from controllers.countries_controller import countries_blueprint
+from controllers.country_controller import countries_blueprint
 
 app = Flask(__name__)
 
