@@ -6,10 +6,18 @@ import repositories.country_repository as country_repository
 
 countries_blueprint = Blueprint("countries", __name__)\
 
+#SHOW ALL
 @countries_blueprint.route("/countries")
 def countries():
     countries = country_repository.select_all()
     return render_template("countries/index.html", countries = countries)
+
+#SHOW ONE
+@countries_blueprint.route("/countries/<id>", methods=['GET'])
+def select(id):
+    country = country_repository.select(id)
+    return render_template("countries/show.html", country = country)
+
 
 # NEW
 # GET
@@ -28,4 +36,27 @@ def create_country():
     reflection = request.form['reflection']
     country = Country(country_name, continent, img_url, reason, reflection)
     country_repository.new_country(country)
+    return redirect('/countries')
+
+
+# EDIT
+# GET '/countries/<id>/edit'
+@countries_blueprint.route("/countries/<id>/edit", methods=['GET'])
+def edit_country(id):
+    country = country_repository.select(id)
+    return render_template('countries/edit.html', country = country)
+
+# UPDATE
+# PUT '/countries/<id>'
+@countries_blueprint.route("/countries/<id>", methods=['POST'])
+def update_country(id):
+
+    country_name = request.form['country_name']
+    continent = request.form['continent']
+    img_url = request.form['img_url']
+    reason = request.form['reason']
+    reflection = request.form['reflection']
+
+    country = Country(country_name, continent, img_url, reason, reflection, id)
+    country_repository.update(country)
     return redirect('/countries')
