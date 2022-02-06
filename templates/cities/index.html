@@ -13,7 +13,7 @@
                     {% for city in cities %}
                 <tr>
                     <td><a href="/cities/{{ city.id }}"> {{city.city_name}} </a> </td>
-                    <td> {{ city.countryid.continent }} </td>
+                    <td> {{ city.country_id.continent }} </td>
                 </tr>
                 <tr> 
                     <td> {{city.reflection }} </td>
@@ -30,5 +30,5 @@
     </table>
 
 </p>
-
+</div>
 {% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>New City</h1>
+
+    <form action="/cities" method="post">
+
+        <label for="city_name">Country's Name:</label>
+            <input type="text" name="city_name" id="city_name">
+            <p></p>
+        <label for="country_id">Country:</label>
+            <select name="continent" id="continent">
+                <option value="1">Scotland</option>
+                <option value="2">Vietnam</option>
+            </select>
+        <p></p>
+        <label for="visited">Visited:</label>
+            <select name="visited" id="visited">
+                <option value=False>Not yet</option>
+                <option value=True>Already</option>
+            </select>
+        <p></p>
+
+        <label for="reason">Reason</label>
+        <label for="img_url">Image Link</label>
+            <input type="url" name="img_url" id="img_url">
+        <p></p>
+        <label for="reason">Reason</label>
+            <input type="text" name="reason" id="reason">
+        <p></p>
+        <label for="reflection">Reflections</label>
+            <input type="text" name="reflection" id="reflection">
+<p></p>
+        <input class="btn btn--action" type='submit' value="Add City">
+    </form>
+
+
+    {% endblock %}

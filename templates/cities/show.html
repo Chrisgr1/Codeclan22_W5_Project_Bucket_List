@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>City Name: {{city.city_name}}</p>
+    <hr>
+    <p>Country: {{city.country_id}}</p>
+    <p>I want to: {{city.reason}} </p>
+    <p>Reflections {{city.reflection}}</p>
+    <p>Reflections {{city.visited}}</p>
+    <p><img src=" {{city.img_url}}" alt="Pic here "></p>
+    <p><a href="/cities/{{city.id}}/edit">Edit</a></p>
+  </div>
+
+{% endblock %}
