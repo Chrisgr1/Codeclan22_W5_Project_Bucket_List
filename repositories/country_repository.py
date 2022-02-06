@@ -22,3 +22,8 @@ def select_all():
         countries.append(country)
     return countries
 
+def edit(country):
+    sql = "UPDATE countries SET ((country_name, continent, img_url, reason, reflection) VALUES (%s, %s, %s, %s, %s) WHERE id = %s"
+    values = [country.country_name, country.continent, country.img_url, country.reason, country.reflection]
+    run_sql(sql, values)
+
