@@ -38,3 +38,9 @@ def create_city():
     city = City(city_name, country_id, img_url, visited, reason, reflection)
     city_repository.new_city(city)
     return redirect('/cities')
+
+#  DELETE
+@cities_blueprint.route("/cities/<id>/delete", methods=['POST'])
+def delete_city(id):
+    city_repository.delete(id)
+    return redirect("/cities")
