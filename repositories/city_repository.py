@@ -11,7 +11,6 @@ def new_city(city):
     id = results[0]['id']
     city.id=id
     return city
-# SELECT ALL
 
 # SELECT ALL
 def select_all():
@@ -41,8 +40,10 @@ def delete(id):
     sql  = "DELETE FROM cities WHERE id = %s"
     values = [id]
     run_sql(sql, values)
-# UPDATE CITY
 
+# DELEETE ALL
 def delete_all():
     sql = "DELETE  FROM cities"
     run_sql(sql)
+
+    # UPDATE CITY

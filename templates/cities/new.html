@@ -10,15 +10,18 @@
             <p></p>
         <label for="country_id">Country:</label>
             <select name="continent" id="continent">
-                <option value="1">Scotland</option>
-                <option value="2">Vietnam</option>
+                {% for country in countries %}
+                <option value="{{ country.id }}"> {{ country.country_name }} </option>
+                {% endfor %}
             </select>
+
         <p></p>
         <label for="visited">Visited:</label>
             <select name="visited" id="visited">
                 <option value=False>Not yet</option>
                 <option value=True>Already</option>
             </select>
+            
         <p></p>
 
         <label for="reason">Reason</label>
