@@ -1,0 +1,56 @@
+#images {
+    width: 25px;
+    height: 25px;
+    background-color: lightblue;
+    border: 1px solid white;
+}
+.image {
+    width: 250px;
+    height: 250px;
+    background-color: lightblue;
+    border: 1px solid white;
+    border-bottom-width: 100px transparent; 
+}
+
+.large-image {
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+    border: 100px solid white;
+}
+
+.small-image {
+    width: 125px;
+    height: 125px;
+    background-color: lightblue;
+    border: 1px solid white;
+}
+
+#visible-page {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'menu main'
+        'footer footer';
+    grid-template-columns: 1fr 4fr;
+    background-color: cornflowerblue;
+    color:aliceblue;
+}
+results {
+    display: inline-block;
+    width: 100px;
+    color: crimson;
+}
+
+nav {
+    margin-inline-start: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: left;
+    color:aliceblue;
+  }
+
+  .new {
+display: flex;
+grid-auto-rows: auto;
+  }

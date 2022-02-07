@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.country import Country
 import repositories.country_repository as country_repository
-# import repositories.city_repository as city_repository
+import repositories.city_repository as city_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
@@ -58,5 +58,6 @@ def update_country(id):
     reflection = request.form['reflection']
 
     country = Country(country_name, continent, img_url, reason, reflection, id)
+    print(country.__dict__)
     country_repository.update(country)
     return redirect('/countries')

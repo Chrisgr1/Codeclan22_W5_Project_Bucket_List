@@ -1,17 +1,23 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block content %}
 
-  <div>
+  <div class = "results">
     <p>City Name: {{city.city_name}}</p>
     <hr>
-    <p>Country: {{city.country_id}}</p>
+    <p>Country: {{ city.country.country_name}}</p>
     <p>I want to: {{city.reason}} </p>
     <p>Reflections {{city.reflection}}</p>
     <p>Reflections {{city.visited}}</p>
-    <p><img src=" {{city.img_url}}" alt="Pic here "></p>
-    <p><a href="/cities/{{city.id}}/edit">Edit</a></p>
   </div>
-  <p><a href="/cities/{{city.id}}/delete">Delete</a></p>
-</div>
+
+    <p><img class = "image" src=" {{city.img_url}}" alt="Pic here "></p>
+    <p><a href="/cities/{{city.id}}/edit">Edit</a></p>
+
+<form action="/cities/{{city.id}}/delete" method="post">
+  <input type="submit" value="delete">
+</form>
 
 {% endblock %}
+
+
+<!--     <input type="text" name="city_name" id="city_name"> -->

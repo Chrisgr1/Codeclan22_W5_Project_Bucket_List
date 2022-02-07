@@ -16,16 +16,17 @@
                     <td> {{ country.continent }} </td>
                 </tr>
                 <tr> 
-                    <td> {{country.reflection }} </td>
-                    <td> {{country.reason }} </td>
-
-
+                    <td>Reason:</td><td> {{country.reason }} </td>
+                <tr>
+                    <td>Reflections:</td>
+                    <td>{{country.reflection }} </td>
                 </tr>
             </td>
             <td>
-                <img src="{{country.img_url}}" alt="this  should be a pic">
+                <img class="image" src="{{country.img_url}}" alt="this  should be a pic">
+
             </td>
-                {% endfor %}
+            {% endfor %}
         </tr>
     </table>
 

@@ -2,11 +2,12 @@ from db.run_sql import run_sql
 
 from models.country import Country
 from models.city import City
+import repositories.country_repository as country_repository 
 
 # NEW CITY
 def new_city(city):
     sql = "INSERT INTO cities (city_name, country_id, img_url, visited, reason, reflection) VALUES (%s, %s, %s, %s, %s, %s) returning *"
-    values = [city.city_name, city.country_id, city.img_url, city.visited, city.reason, city.reflection]
+    values = [city.city_name, city.country_id.id, city.img_url, city.visited, city.reason, city.reflection]
     results = run_sql(sql, values)
     id = results[0]['id']
     city.id=id
@@ -20,7 +21,8 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        city = City(row['city_name'], row['country_id'], row['img_url'], row['visited'], row['reason'], row['reflection'], row['id'])
+        country = country_repository.select(row['country_id'])
+        city = City(row['city_name'], country, row['img_url'], row['visited'], row['reason'], row['reflection'], row['id'])
         cities.append(city)
     return cities
 
@@ -32,7 +34,8 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result != None:
-        city = City(result['city_name'], result['country_id'], result['img_url'], result['visited'], result['reason'], result['reflection'], result['id'])
+        country = country_repository.select(result['country_id'])
+        city = City(result['city_name'], country , result['img_url'], result['visited'], result['reason'], result['reflection'], result['id'])
     return city
 
 #  DELETE ONE

@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Dare to Dream</title>
 </head>
 <body>
     <main>
+    <div id = "visible-page">
+        <div>
         <nav>
             <ul>
-                <li>
-                    View
+                
+                    <img src="https://i.ibb.co/VVpYDWD/DiVidEnd.gif" class = "small-image" alt="logo">
+                     View
                     <ul>
                         <li>
                             <a href="/countries">Countries</a>  
@@ -33,11 +37,17 @@
                 </li>
             </ul>
         </nav>
+        </div>
         <section id="content"> 
             {% block content %} 
             
             {% endblock %}
         </section>
+    </div>
     </main>
 </body>
 </html>
+
+<!-- [url=https://imgbb.com/][img]https://i.ibb.co/71k98nQ/DiVidEnd.png[/img][/url]
+[url=https://imgbb.com/][img]https://i.ibb.co/VVpYDWD/DiVidEnd.gif[/img][/url]
+[url=https://imgbb.com/][img]https://i.ibb.co/swgPzGf/Di-Vid-End-2.png[/img][/url] -->

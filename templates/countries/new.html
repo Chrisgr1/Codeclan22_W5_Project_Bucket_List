@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<div class = new>
 <h1>New Country</h1>
 
     <form action="/countries" method="post">
 
         <label for="country_name">Country's Name:</label>
-            <input type="text" name="country_name" id="country_name">
+            <input type="text" name="country_name" id="country_name" autofocus placeholder="Where Do You Want To Go?">
             <p></p>
         <label for="continent">Continent:</label>
             <select name="continent" id="continent">
@@ -20,16 +20,16 @@
             </select>
         <p></p>
         <label for="img_url">Image Link</label>
-            <input type="url" name="img_url" id="img_url">
+            <input type="url" name="img_url" id="img_url" placeholder="Put Image Link Here">
         <p></p>
         <label for="reason">Reason</label>
-            <input type="text" name="reason" id="reason">
+            <input type="text" name="reason" id="reason" placeholder="Why Do You Want To Go?">
         <p></p>
         <label for="reflection">Reflections</label>
-            <input type="text" name="reflection" id="reflection">
+            <input type="text" name="reflection" id="reflection" placeholder="Reflections">
 <p></p>
         <input class="btn btn--action" type='submit' value="Add Country">
     </form>
 
-
+</div>
     {% endblock %}

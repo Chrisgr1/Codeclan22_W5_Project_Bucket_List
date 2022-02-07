@@ -13,7 +13,7 @@
                     {% for city in cities %}
                 <tr>
                     <td><a href="/cities/{{ city.id }}"> {{city.city_name}} </a> </td>
-                    <td> {{ city.country_id.continent }} </td>
+                    <td> {{ city.country.continent }} </td>
                 </tr>
                 <tr> 
                     <td> {{city.reflection }} </td>
@@ -23,8 +23,9 @@
                 </tr>
             </td>
             <td>
-                <img src="{{city.img_url}}" alt="this  should be a pic">
+                <img class ="image" src="{{city.img_url}}" alt="this  should be a pic">
             </td>
+            
                 {% endfor %}
         </tr>
     </table>
