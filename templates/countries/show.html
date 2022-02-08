@@ -1,29 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2><strong> {{country.country_name}}</strong>, {{country.continent}}</h2>
+    <section class = "show_side">
+        <div class ="container">
 
-
-
-    <h1>{{country.country_name}}</h1>
-    <hr>
-    <div class="show-side">
-        <div>
-            <p>Continent: {{country.continent}}</p>
-            <p>Reason: {{country.reason}} </p>
-            <p>Reflections {{country.reflection}}</p>
+            
+            <h3>Cities in {{country.country_name}}: </h3>
+                <p></p>{% for city in cities %}
+                {{city.city_name}}, 
+            {% endfor %}</p>
+            <h3>Reason for going: </h3><p></p>{{country.reason}} </p>
+            <h3>Reflections on the experience: </h3> <p> {{country.reflection}}</p>
+        
+        <p><p></p></p>
+        <a href="/countries/{{country.id}}/edit" class="button edit"><button>Edit</button></a> <p></p><p></p>
         </div> 
-        <div>
+        <div class ="container">
             <img class = "image" src=" {{country.img_url}}" alt="Pic here ">
+            <p></p>
         </div>
-    </div>
-    <div></div>
-    <a href="/countries/{{country.id}}/edit" class="button edit"><button>Edit</button></a> <p></p><p></p>
-    </div>
-
-    <div>
-    <p></p>
-    </div>
+    </section>
 
 
 
 {% endblock %}
+

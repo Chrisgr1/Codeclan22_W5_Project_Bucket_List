@@ -17,6 +17,7 @@
     height: 500px;
     background-color: lightblue;
     border: 100px solid white;
+    
 }
 
 .small-image {
@@ -32,7 +33,7 @@
         'header header'
         'menu main'
         'footer footer';
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
     background-color: cornflowerblue;
     color:aliceblue;
 }
@@ -43,18 +44,32 @@ label {
     color: aliceblue;
 }
 
-#show-side {
-    display: grid;
-    grid-template-rows: none;
+.show_side {
+    position: fixed;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: left;
+    scroll-padding-inline-start: 50px ;
+    background-color: cornflowerblue;
+
 }
 
 nav {
-    margin-inline-start: 25px;
     display: flex;
     flex-flow: column nowrap;
     align-items: left;
     color:aliceblue;
+    margin-bottom: 100px;
   }
+
+#content {
+    margin-left: 50px;
+    color: aliceblue;
+    background-color: cornflowerblue;
+    font-family: 'Petit Formal Script';
+
+}
+
 
   /* .new {
 

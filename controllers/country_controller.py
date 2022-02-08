@@ -16,7 +16,12 @@ def countries():
 @countries_blueprint.route("/countries/<id>", methods=['GET'])
 def select(id):
     country = country_repository.select(id)
-    return render_template("countries/show.html", country = country)
+    all_cities = city_repository.select_all()
+    cities = []
+    for city in all_cities:
+        if city.country.id == country.id:
+            cities.append(city)
+    return render_template("countries/show.html", country = country, cities=cities)
 
 
 # NEW
