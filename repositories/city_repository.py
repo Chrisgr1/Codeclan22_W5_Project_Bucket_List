@@ -7,7 +7,7 @@ import repositories.country_repository as country_repository
 # NEW CITY
 def new_city(city):
     sql = "INSERT INTO cities (city_name, country_id, img_url, visited, reason, reflection) VALUES (%s, %s, %s, %s, %s, %s) returning *"
-    values = [city.city_name, city.country_id.id, city.img_url, city.visited, city.reason, city.reflection]
+    values = [city.city_name, city.country, city.img_url, city.visited, city.reason, city.reflection]
     results = run_sql(sql, values)
     id = results[0]['id']
     city.id=id
