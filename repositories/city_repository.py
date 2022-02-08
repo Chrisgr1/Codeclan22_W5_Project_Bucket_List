@@ -50,3 +50,7 @@ def delete_all():
     run_sql(sql)
 
     # UPDATE CITY
+def update(city):
+    sql = "UPDATE cities SET (city_name, country_id, img_url, visited, reason, reflection) VALUES (%s, %s, %s, %s, %s, %s) returning *"
+    values = [city.city_name, city.country, city.img_url, city.visited, city.reason, city.reflection]
+    results = run_sql(sql, values)

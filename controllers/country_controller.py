@@ -38,15 +38,14 @@ def create_country():
     country_repository.new_country(country)
     return redirect('/countries')
 
-
-# EDIT
+# UPDATE
 # GET '/countries/<id>/edit'
 @countries_blueprint.route("/countries/<id>/edit", methods=['GET'])
 def edit_country(id):
     country = country_repository.select(id)
     return render_template('countries/edit.html', country = country)
 
-# UPDATE
+
 # PUT '/countries/<id>'
 @countries_blueprint.route("/countries/<id>", methods=['POST'])
 def update_country(id):
