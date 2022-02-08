@@ -4,14 +4,26 @@
 
 
 
-    <p>Name: {{country.country_name}}</p>
+    <h1>{{country.country_name}}</h1>
     <hr>
-    <p>Continent: {{country.continent}}</p>
-    <p>I want to: {{country.reason}} </p>
-    <p>Reflections {{country.reflection}}</p>
-    <p><img class = "image" src=" {{country.img_url}}" alt="Pic here "></p>
-    <p><a href="/countries/{{country.id}}/edit">Edit</a></p>
-    <p></p><p></p>
+    <div class="show-side">
+        <div>
+            <p>Continent: {{country.continent}}</p>
+            <p>Reason: {{country.reason}} </p>
+            <p>Reflections {{country.reflection}}</p>
+        </div> 
+        <div>
+            <img class = "image" src=" {{country.img_url}}" alt="Pic here ">
+        </div>
+    </div>
+    <div></div>
+    <a href="/countries/{{country.id}}/edit" class="button edit"><button>Edit</button></a> <p></p><p></p>
+    </div>
+
+    <div>
+    <p></p>
+    </div>
+
 
 
 {% endblock %}

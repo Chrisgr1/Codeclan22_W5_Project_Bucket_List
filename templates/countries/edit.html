@@ -7,7 +7,7 @@
     <div>
 
         <label for="country_name">Country's Name:</label>
-            <input type="text" name="country_name" id="country_name" value = "{{country.country_name}}" >
+            <input type="text" name="country_name" id="country_name" value = "{{country.country_name}}" size=25>
             <p></p>
 
         <label for="continent">Continent:</label>
@@ -38,13 +38,13 @@
             </select>
         <p></p>
         <label for="img_url">Image Link</label>
-            <input type="url" name="img_url" id="img_url" value = "{{country.img_url}}">
+            <input type="url" name="img_url" id="img_url" value = "{{country.img_url}}" size=30>
         <p></p>
         <label for="reason">Reason</label>
-            <input type="text" name="reason" id="reason" value = "{{country.reason}}">
+        <textarea name="reason" id="reason" rows=2 cols =25>{{country.reason}}</textarea>
         <p></p>
         <label for="reflection">Reflections</label>
-            <input type="text" name="reflection" id="reflection" value = "{{country.reflection}}">
+        <textarea name="reflection" id="reflection" rows=2 cols =25 >{{country.reflection}} </textarea>
 <p></p>
         <input class="btn btn--action" type='submit' value="Update Country">
     </div>

@@ -39,8 +39,13 @@
 label {
     display: inline-block;
     text-align:right;
-    width: 100px;
+    width: 125px;
     color: aliceblue;
+}
+
+#show-side {
+    display: grid;
+    grid-template-rows: none;
 }
 
 nav {
