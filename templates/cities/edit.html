@@ -5,7 +5,7 @@
 <div class = "results" >
 <h1>Update City <p></p></h1>
 
-    <form action="/cities" method="post" autofocus>
+    <form action="/cities/{{city.id}}" method="post" >
 
         <label for="city_name">City's Name:</label>
             <input type="text" name="city_name" id="city_name" value="{{ city.city_name }}" size =25>
@@ -14,9 +14,11 @@
 
         <label for="country_id">Country:</label>
             <select name="country_id" id="country">
-                <option value="Scotland">test</option>
-                <option value="Scotland">test</option>
-
+                {% for country in list_of_countries %}
+                    <option value="{{country.id}}"
+                        {% if country.id == city.country.id %} selected="selected" {% endif %}>
+                    {{country.country_name}}</option>
+                {% endfor %}
             </select>
  
             <p></p>
