@@ -3,7 +3,7 @@
 <div class = "results" >
 <h1>New City <p></p></h1>
 
-    <form action="/cities" method="post">
+    <form action="/cities" method="post" autofocus>
 
         <label for="city_name">Country's Name:</label>
             <input type="text" name="city_name" id="city_name">
@@ -14,22 +14,20 @@
                 <option value="{{ country.id }}"> {{ country.country_name }} </option>
                 {% endfor %}
             </select>
-
         <p></p>
         <label for="visited">Visited:</label>
             <select name="visited" id="visited">
                 <option value=False>Not yet</option>
                 <option value=True>Already</option>
-            </select>
-            
+            </select>            
         <p></p>
-
-        <label for="reason">Reason</label>
         <label for="img_url">Image Link</label>
             <input type="url" name="img_url" id="img_url">
         <p></p>
         <label for="reason">Reason</label>
-            <input type="text" name="reason" id="reason">
+            <textarea type="text" name="reason" id="reason" rows="5" cols="30"> 
+                Reason
+            </textarea>
         <p></p>
         <label for="reflection">Reflections</label>
             <input type="text" name="reflection" id="reflection">

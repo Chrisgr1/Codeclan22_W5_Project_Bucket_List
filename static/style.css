@@ -36,10 +36,11 @@
     background-color: cornflowerblue;
     color:aliceblue;
 }
-results {
+label {
     display: inline-block;
+    text-align:right;
     width: 100px;
-    color: crimson;
+    color: aliceblue;
 }
 
 nav {
@@ -50,7 +51,10 @@ nav {
     color:aliceblue;
   }
 
-  .new {
-display: flex;
-grid-auto-rows: auto;
-  }
+  /* .new {
+
+grid-auto-rows: axto;
+display: inline;
+width: 10px;
+color: crimson;
+  } */
