@@ -1,23 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
 
-  <div class = "results">
+<h2><strong> {{city.city_name}}</strong>, {{city.country.continent}}</h2>
+    <section class = "show_side">
+        <div class ="container">
+
     <h1>{{city.city_name}}</h1>
     <hr>
     <p>Country: {{ city.country.country_name}}</p>
     <p>I want to: {{city.reason}} </p>
     <p>Reflections {{city.reflection}}</p>
     <p>Visited: {{city.visited}}</p>
-  </div>
+      <section class = "show_side">
+        <div class ="container">
+        <a href="/cities/{{city.id}}/edit"><button>Edit</button></a>
+        </div>
+        <div class ="container">
+        <form action="/cities/{{city.id}}/delete" method="post">
+          <input type="submit" value="delete">
+        </form>
+        </div>
+        </section>
+      </div>
+  
 
-    <p><img class = "image" src=" {{city.img_url}}" alt="Pic here "></p>
-    <p><a href="/cities/{{city.id}}/edit"><button>Edit</button></a></p>
+    <p>
+    <div class = "container"> <img class = "image" src=" {{city.img_url}}" alt="Pic here "></p>
+    <p></p>
+    </div>
 
-<form action="/cities/{{city.id}}/delete" method="post">
-  <input type="submit" value="delete">
-</form>
+
 
 {% endblock %}
 
-
-<!--     <input type="text" name="city_name" id="city_name"> -->
