@@ -12,18 +12,24 @@
                 </tr>
                     {% for country in countries %}
                 <tr>
-                    <td><a href="/countries/{{ country.id }}"> {{country.country_name}} </a> </td>
-                    <td> {{ country.continent }} </td>
+                    <td><a href="/countries/{{ country.id }}"> {{country.country_name}}, {{ country.continent }} </a> 
+                        <p></p> {{country.reason }}
+                        <p></p> {{country.reflection }}
+ 
+                    </td>
+                    <td> 
+                        <img class="image" src="{{country.img_url}}" alt="this  should be a pic"> 
+                    </td>
                 </tr>
                 <tr> 
-                    <td>Reason:</td><td> {{country.reason }} </td>
+                    <td> </td><td> </td>
                 <tr>
-                    <td>Reflections:</td>
-                    <td>{{country.reflection }} </td>
+                    <td> </td>
+                    <td></td>
                 </tr>
             </td>
             <td>
-                <img class="image" src="{{country.img_url}}" alt="this  should be a pic"> 
+
 
             </td>
             {% endfor %}
