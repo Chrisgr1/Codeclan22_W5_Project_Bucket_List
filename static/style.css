@@ -91,7 +91,6 @@ display: flex;
     align-items: center;
 justify-content: center;
 }
-
-table {
+.table {
     margin-bottom: 10px;
 }
