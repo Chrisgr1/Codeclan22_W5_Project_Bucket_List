@@ -8,9 +8,9 @@
 
     <h1>{{city.city_name}}</h1>
     <hr>
-    <p>{{ city.country.country_name}}, {{city.country.country_name}}</p>
+    <p>{{ city.country.country_name}}, {{city.country.continent}}</p>
     <h3>Reason for going: </h3><p></p><p>{{city.reason}} </p>
-    <p> <h3>Reflections on the experience: </h3> <p></p>{{city.reflection}}</p>
+    <h3>Reflections on the experience: </h3> <p></p><p>{{city.reflection}}</p>
     <p>Visited:      {% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}
      {% if city.visited == False %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}
      <p></p></p>
