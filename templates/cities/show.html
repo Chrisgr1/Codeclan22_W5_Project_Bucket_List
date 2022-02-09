@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h2><strong> {{city.city_name}}</strong>, {{city/country. country_name}} {{city.country.continent}}</h2>
+<h2><strong> {{city.city_name}}</strong>, {{city
+.country. country_name}}, {{city.country.continent}}</h2>
     <section class = "show_side">
         <div class ="container">
 
     <h1>{{city.city_name}}</h1>
     <hr>
-    <p>Country: {{ city.country.country_name}}</p>
-    <p>I want to: {{city.reason}} </p>
-    <p>Reflections {{city.reflection}}</p>
+    <p>{{ city.country.country_name}}, {{city.country.continent}}</p>
+    <p>{{city.reason}} </p>
+    <p>{{city.reflection}}</p>
     <p>Visited:      {% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}
      {% if city.visited == False %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}
      <p></p></p>
@@ -19,7 +20,7 @@
         </div>
         <div class ="container">
         <form action="/cities/{{city.id}}/delete" method="post">
-          <input type="submit" value="delete">
+          <input type="submit" value="Delete">
         </form>
         </div>
         </section>

@@ -15,18 +15,19 @@
                     <td><a href="/cities/{{ city.id }}"> {{city.city_name}}, {{ city.country.continent }}</a> 
                     <p></p> {{city.reflection }}
                     <p></p> {{city.reason }}
+                    <p></p>
+                    Visited: {% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}
+                       {% if city.visited == False %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}
+                       <p></p>
                 </td>
                     <td> 
                         <a href="/cities/{{ city.id }}"><img class ="image" src="{{city.img_url}}" alt="this  should be a pic"></a>    
                     </td>
                 </tr>
                 <tr> 
-                    <td>Visited <p></p></td>
-                    <td> <div class="centre">
-                         {% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}
-                        {% if city.visited == False %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}
-                        <p></p>
-                    </div> 
+                    <td></td>
+                    <td> 
+                        <p></p><p></p>
                     </td>
 
                 </tr>
