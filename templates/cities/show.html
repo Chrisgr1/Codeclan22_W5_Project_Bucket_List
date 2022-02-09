@@ -3,36 +3,34 @@
 
 <h2><strong> {{city.city_name}}</strong>, {{city
 .country. country_name}}</h2>
-    <section class = "show_side">
+    <div class = "edit-form show_side">
         <div class ="container">
 
-    <h1>{{city.city_name}}</h1>
-    <hr>
-    <p>{{ city.country.country_name}}, {{city.country.continent}}</p>
-    <h3>Reason for going: </h3><p></p><p>{{city.reason}} </p>
-    <h3>Reflections on the experience: </h3> <p></p><p>{{city.reflection}}</p>
-    <h3>Visited:{% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}
-     {% if city.visited == False %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}</h3>
-     <p></p></p>
-      <section class = "show_side">
-        <div class ="container">
-        <a href="/cities/{{city.id}}/edit"><button>Edit</button></a>
-        </div>
-        <div class ="container">
-        <form action="/cities/{{city.id}}/delete" method="post">
-          <input type="submit" value="Delete">
-        </form>
-        </div>
-        </section>
+          <h1>{{city.city_name}}</h1>
+          <hr>
+          <p>{{ city.country.country_name}}, {{city.country.continent}}</p>
+          <h3>Reason for going: </h3><p></p><p>{{city.reason}} </p>
+          <h3>Reflections on the experience: </h3> <p></p><p>{{city.reflection}}</p>
+          <h3>Visited: {% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}
+          {% if city.visited == False %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}</h3>
+          <p></p></p>
+            <div class = "show_side">
+                <div class ="container">
+                    <a href="/cities/{{city.id}}/edit"><button>Edit</button></a>
+                </div>
+                <div class ="container">
+                  <form action="/cities/{{city.id}}/delete" method="post">
+                    <input type="submit" value="Delete">
+                </form>
+              </div>
+            </div>
+          </div>
+          <p>
+            <div class = "container"> <img class = "image" src=" {{city.img_url}}" alt="Pic here "></p>
+            <p></p>
+            </div>
       </div>
   
-
-    <p>
-    <div class = "container"> <img class = "image" src=" {{city.img_url}}" alt="Pic here "></p>
-    <p></p>
-    </div>
-
-
 
 {% endblock %}
 

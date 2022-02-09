@@ -17,7 +17,7 @@ country_repository.new_country(country3)
 city1 = City("Glasgow", 1, 'https://images.pexels.com/photos/5870360/pexels-photo-5870360.jpeg?cs=srgb&dl=pexels-sinitta-leunen-5870360.jpg&fm=jpg', True, 'Mad choons and chips & vinegar', 'Got pure mad wi it')
 city_repository.new_city(city1)
 
-city2 = City("Zootropolis", 1, 'https://i.ibb.co/4TssDvT/Whats-App-Image-2022-02-09-at-12-36-53.jpg', False, 'Zootropolis is a city that has been buried underneath a mountain.', '')
+city2 = City("Zootropolis", 1, 'https://i.ibb.co/VYn4TPX/Whats-App-Image-2022-02-09-at-12-36-53.jpg', False, 'Zootropolis is a city that has been buried underneath a mountain.', '')
 city_repository.new_city(city2)
 
 pdb.set_trace()

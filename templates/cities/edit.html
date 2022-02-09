@@ -5,13 +5,14 @@
 <h1>Update City <p></p></h1>
 
     <form action="/cities/{{city.id}}" method="post" >
-
-        <label for="city_name">City's Name:</label>
+        <div class="edit-form show_side">
+            <div class = "container"
+        <label for="city_name">City's Name:</label><p></p>
             <input type="text" name="city_name" id="city_name" value="{{ city.city_name }}" size =25>
             <p></p>
 
 
-        <label for="country_id">Country:</label>
+        <label for="country_id">Country:</label><p></p>
             <select name="country_id" id="country">
                 {% for country in list_of_countries %}
                     <option value="{{country.id}}"
@@ -21,7 +22,7 @@
             </select>
  
             <p></p>
-        <label for="visited">Visited:</label>
+        <label for="visited">Visited:</label><p></p>
             <select name="visited" id="visited" value="{{ city.visited }}">
                 <option value=False
                 {% if city.visited == False %} selected="selected" {% endif %}>Not yet</option>
@@ -29,16 +30,22 @@
                 {% if city.visited == True %} selected="selected" {% endif %}>Already</option>
             </select>            
         <p></p>
-        <label for="img_url">Image Link</label>
+        <label for="img_url">Image Link</label><p></p>
             <input type="url" name="img_url" id="img_url" size =30 value = "{{city.img_url}}">
         <p></p>
-        <label for="reason">Reason</label>
+        <label for="reason">Reason</label><p></p>
             <textarea name="reason" id="reason" rows="2" cols="25" placeholder="Why Do You Want To Go?" >{{city.reason}}</textarea>
         <p></p>
-        <label for="reflection">Reflections</label>
+        <label for="reflection">Reflections</label><p></p>
             <textarea type="text" name="reflection" id="reflection" rows="2" cols="25">{{city.reflection}}</textarea>
 <p></p>
         <input class="btn btn--action" type='submit' value="Update City">
+    </div>
+    <div class ="container">
+        <h3></h3><img class = "image" src="{{city.img_url}}" alt="no pic">
+
+    </div>
+    </div>
     </form>
 
 
