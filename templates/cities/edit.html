@@ -2,7 +2,6 @@
 {% block content %}
 
 
-<div class = "results" >
 <h1>Update City <p></p></h1>
 
     <form action="/cities/{{city.id}}" method="post" >
@@ -24,8 +23,10 @@
             <p></p>
         <label for="visited">Visited:</label>
             <select name="visited" id="visited" value="{{ city.visited }}">
-                <option value=False>Not yet</option>
-                <option value=True>Already</option>
+                <option value=False
+                {% if city.visited == False %} selected="selected" {% endif %}>Not yet</option>
+                <option value=True
+                {% if city.visited == True %} selected="selected" {% endif %}>Already</option>
             </select>            
         <p></p>
         <label for="img_url">Image Link</label>
@@ -39,6 +40,6 @@
 <p></p>
         <input class="btn btn--action" type='submit' value="Update City">
     </form>
-</div> 
+
 
     {% endblock %}
