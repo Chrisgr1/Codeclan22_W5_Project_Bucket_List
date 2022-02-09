@@ -70,6 +70,7 @@ nav {
     align-items: left;
     color:aliceblue;
     margin-bottom: 500px;
+    font-family: 'Petit Formal Script';
   }
 
 #content {
@@ -109,5 +110,6 @@ justify-items: center;
 }
 
 .edit-form {
-    top: 100px
+    top: 100px;
+    max-width: 600px
 }
