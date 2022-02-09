@@ -12,18 +12,25 @@
                 </tr>
                     {% for city in cities %}
                 <tr>
-                    <td><a href="/cities/{{ city.id }}"> {{city.city_name}} </a> </td>
-                    <td> {{ city.country.continent }} </td>
+                    <td><a href="/cities/{{ city.id }}"> {{city.city_name}}, {{ city.country.continent }}</a> 
+                    <p></p> {{city.reflection }}
+                    <p></p> {{city.reason }}
+                </td>
+                    <td> 
+                        <img class ="image" src="{{city.img_url}}" alt="this  should be a pic">    
+                    </td>
                 </tr>
                 <tr> 
-                    <td> {{city.reflection }} </td>
-                    <td> {{city.reason }} </td>
+                    <td>  {% if city.visited == True %} Yes{% endif %}</td>
+                    <td>  
+
+                    </td>
 
 
                 </tr>
             </td>
             <td>
-                <img class ="image" src="{{city.img_url}}" alt="this  should be a pic">
+
             </td>
             
                 {% endfor %}
