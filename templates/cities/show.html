@@ -11,8 +11,8 @@
     <p>{{ city.country.country_name}}, {{city.country.continent}}</p>
     <h3>Reason for going: </h3><p></p><p>{{city.reason}} </p>
     <h3>Reflections on the experience: </h3> <p></p><p>{{city.reflection}}</p>
-    <p>Visited:      {% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}
-     {% if city.visited == False %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}
+    <h3>Visited:{% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}
+     {% if city.visited == False %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}</h3>
      <p></p></p>
       <section class = "show_side">
         <div class ="container">
