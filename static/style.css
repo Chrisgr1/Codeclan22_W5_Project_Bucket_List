@@ -113,3 +113,7 @@ justify-items: center;
     top: 100px;
     max-width: 600px
 }
+
+.container1 {
+    display: block;
+}
