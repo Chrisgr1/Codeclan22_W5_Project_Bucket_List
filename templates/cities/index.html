@@ -21,22 +21,24 @@
                     </td>
                 </tr>
                 <tr> 
-                    <td>Visited</td>
+                    <td>Visited <p></p></td>
                     <td> <div class="centre">
-                        {% if city.visited == True %} {% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}{% endif %}
-                        {% if city.visited == False %}{% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}{% endif %}
+                         {% if city.visited == True %} <img class ="image_tiny" src="https://i.ibb.co/qJjBvxh/check-box.png" alt="Visited"> {% endif %}
+                        {% if city.visited == False %} <img class ="image_tiny" src="https://i.ibb.co/CvJrsdr/blank-check-box.png" alt="Not visited"> {% endif %}
+                        <p></p>
                     </div> 
                     </td>
 
+                </tr>
+                <tr>
+                    <td><p> </p></td>
+                    <td><p> </p></td>
                 </tr>
             </td>        
             
                 {% endfor %}
         </tr>
-        <tr>
-            <td><p> </p></td>
-            <td><p> </p></td>
-        </tr>
+
     </table>
 
 </p>
