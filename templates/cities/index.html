@@ -17,21 +17,19 @@
                     <p></p> {{city.reason }}
                 </td>
                     <td> 
-                        <img class ="image" src="{{city.img_url}}" alt="this  should be a pic">    
+                        <a href="/cities/{{ city.id }}"><img class ="image" src="{{city.img_url}}" alt="this  should be a pic"></a>    
                     </td>
                 </tr>
                 <tr> 
-                    <td>  {% if city.visited == True %} Yes{% endif %}</td>
+                    <td>  {% if city.visited == True %} Visited{% endif %}</td>
                     <td>  
+                        {% if city.visited == True %} Visited{% endif %}
+                        {% if city.visited == False %} Yet to Visit{% endif %}
 
                     </td>
 
-
                 </tr>
-            </td>
-            <td>
-
-            </td>
+            </td>        
             
                 {% endfor %}
         </tr>
