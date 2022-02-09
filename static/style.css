@@ -21,6 +21,14 @@
     border: 100px solid white;
     
 }
+.image_tiny {
+    width: 25px;
+    height: 25px;
+    align-content: center;
+
+
+    
+}
 
 .small-image {
     width: 125px;
@@ -73,10 +81,17 @@ nav {
 }
 
 
-  /* .new {
+#button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+}
 
-grid-auto-rows: axto;
-display: inline;
-width: 10px;
-color: crimson;
-  } */
+.centre {
+display: flex;
+    align-items: center;
+justify-content: center;
+}
+
+table {
+    margin-bottom: 10px;
+}
