@@ -46,11 +46,11 @@ Pre-requisites:
   
 Walkthrough  
     -   Home  
-    ![This is an image](/imgs/D2D_Home.png)
+![This is an image](/imgs/D2D_Home.png)
 
-    -   Create country/city  
-    ![This is an image](/imgs/D2D_New_Country.png)
-    ![This is an image](/imgs/D2D_New_City.png)  
+    -   Create country/City  
+![This is an image](/imgs/D2D_New_Country.png)
+![This is an image](/imgs/D2D_New_City.png)  
 
     -   View All Countries / Cities    
 ![This is an image](/imgs/D2D_View_Countries.png)  
@@ -61,9 +61,8 @@ Walkthrough
 ![This is an image](/imgs/D2D_View_City.png)
 
     -   Edit Country / Cities  
-![This is an image](/imgs/D2D_Update_City.png)  
 ![This is an image](/imgs/D2D_Update_Country.png)  
-  
+![This is an image](/imgs/D2D_Update_City.png)    
     -   Delete city  
 
 Roadmap  
