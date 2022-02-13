@@ -10,6 +10,7 @@ Dare to Dream - A Bucket List App
             Bucket List Application.
 
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](/imgs/D2D_Home.png)
 
 Functionality
     Home
