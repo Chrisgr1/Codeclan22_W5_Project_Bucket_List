@@ -2,21 +2,19 @@
 
 Contents
 
-
-Dare to Dream - A Bucket List App
-    A life without purpose is full of darkness. Hope and aspiration bring light. Behind this project was one driving question, what is it to be human?
-    To be human is to dream.
-        Dare to Dream
-            Bucket List Application.
-
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 ![This is an image](/imgs/D2D_Home.png)
 
-Functionality
-    Home
-    Create country/city
-    View countries/cities  
-    Edit country/cities
+Dare to Dream - A Bucket List App  
+   -  A life without purpose is full of darkness. Hope and aspiration bring light. Behind this project was one driving question, what is it to be human?  
+    - To be human is to dream.  
+        > Dare to Dream  
+            > Bucket List Application.  
+
+Functionality  
+    Home  
+    Create country/city  
+    View countries/cities    
+    Edit country/cities  
     Delete city
 
 Getting Started
