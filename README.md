@@ -1,6 +1,13 @@
 # W5_Project_Bucket_List
 
 Contents
+Intro
+Functionality
+Getting Started
+Running the Program
+Walkthrough
+Roadmap
+
 
 ![This is an image](/imgs/D2D_Home.png)
 
@@ -32,10 +39,30 @@ First Time Running
         psql -d bucket_list -f bucket_list.sql
         python3 console.py
 
-To run
+Running the Program
     In terminal, in the file directory:  
         Open browswer:
         type http://localhost:5000 into your browser
+
+
+Walkthrough  
+    Home  
+    ![This is an image](/imgs/D2D_Home.png)
+    Create country/city  
+    ![This is an image](/imgs/D2D_New_City.png)
+    ![This is an image](/imgs/D2D_New_Country.png)
+
+    View countries/cities
+    All Countries / Cities    
+![This is an image](/imgs/D2D_View_Cities.png)
+![This is an image](/imgs/D2D_View_Countries.png)
+    One City / 
+![This is an image](/imgs/D2D_View_City.png)
+![This is an image](/imgs/D2D_View_Country.png)
+    Edit country/cities  
+![This is an image](/imgs/D2D_Update_City.png)
+![This is an image](/imgs/D2D_Update_Country.png)
+    Delete city
 
 Roadmap
     V2.0 Updates
