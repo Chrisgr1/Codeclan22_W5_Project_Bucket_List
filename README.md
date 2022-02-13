@@ -1,12 +1,12 @@
 # W5_Project_Bucket_List
 
 **Contents**
-- Intro
-- Functionality
-- Getting Started
-- Running the Program
-- Walkthrough
-- Roadmap
+    - Intro
+    - Functionality
+    - Getting Started
+    - Running the Program
+    - Walkthrough
+    - Roadmap
 
 
 ![This is an image](/imgs/D2D_Home.png)
@@ -18,11 +18,11 @@
               > Dare to Dream - Bucket List Application.  
 
 **Functionality**  
--     Home  
--     Create country/city  
--     View countries/cities    
--     Edit country/cities  
--     Delete city
+    -     Home  
+    -     Create country/city  
+    -     View countries/cities    
+    -     Edit country/cities  
+    -     Delete city
 
 **Getting Started**
 Pre-requisites:  
