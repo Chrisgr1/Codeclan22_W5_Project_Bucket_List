@@ -1,12 +1,12 @@
 # W5_Project_Bucket_List
 
 **Contents**
-    - Intro
-    - Functionality
-    - Getting Started
-    - Running the Program
-    - Walkthrough
-    - Roadmap
+    - Intro  
+    - Functionality  
+    - Getting Started  
+    - Running the Program  
+    - Walkthrough  
+    - Roadmap  
 
 
 ![This is an image](/imgs/D2D_Home.png)
@@ -31,8 +31,10 @@ Pre-requisites:
         -     Python 3: https://www.python.org/downloads/     
         -     Flask: https://flask.palletsprojects.com/en/2.0.x/installation/     
 
+This app also uses SQL, HTML and CSS.
+
 **First Time Running**  
-    - In terminal, in the file directory:   
+    - In terminal, in the file directory type:   
         createdb bucket_list  
         psql -d bucket_list -f bucket_list.sql  
         python3 console.py  
