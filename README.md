@@ -12,11 +12,10 @@
 ![This is an image](/imgs/D2D_Home.png)
 
 **Dare to Dream - A Bucket List App**  
-     A life without purpose is full of darkness. Hope and aspiration bring light.   
+    A life without purpose is full of darkness. Hope and aspiration bring light.   
     Behind this project was one driving question, what is it to be human?  
            To be human is to dream.  
-              > Dare to Dream  
-                       Bucket List Application.  
+              > Dare to Dream - Bucket List Application.  
 
 **Functionality**  
 -     Home  
@@ -27,10 +26,10 @@
 
 **Getting Started**
 Pre-requisites:  
-    Have installed or download and install:     
-    -     Psql: https://www.postgresql.org/download/      
-    -     Python 3: https://www.python.org/downloads/     
-    -     Flask: https://flask.palletsprojects.com/en/2.0.x/installation/     
+    - Have installed or download and install:     
+        -     Psql: https://www.postgresql.org/download/      
+        -     Python 3: https://www.python.org/downloads/     
+        -     Flask: https://flask.palletsprojects.com/en/2.0.x/installation/     
 
 **First Time Running**  
     - In terminal, in the file directory:   
@@ -39,12 +38,12 @@ Pre-requisites:
         python3 console.py  
 
 **Running the Program**
-    In terminal, in the file directory:     
+    - In terminal, in the file directory:     
         Open browswer:  
         type http://localhost:5000 into your browser  
 
   
-Walkthrough  
+**Walkthrough**
     -   Home  
 ![This is an image](/imgs/D2D_Home.png)
 
@@ -66,6 +65,7 @@ Walkthrough
     -   Delete city  
 
 Roadmap  
+
     - V2.0 Updates  
         Increased functionality  
         Save destinations  
