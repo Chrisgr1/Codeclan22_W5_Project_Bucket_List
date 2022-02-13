@@ -19,11 +19,11 @@
                        Bucket List Application.  
 
 **Functionality**  
-    Home  
-    Create country/city  
-    View countries/cities    
-    Edit country/cities  
-    Delete city
+-     Home  
+-     Create country/city  
+-     View countries/cities    
+-     Edit country/cities  
+-     Delete city
 
 **Getting Started**
 Pre-requisites:  
@@ -47,6 +47,7 @@ Pre-requisites:
 Walkthrough  
     -   Home  
     ![This is an image](/imgs/D2D_Home.png)
+
     -   Create country/city  
     ![This is an image](/imgs/D2D_New_Country.png)
     ![This is an image](/imgs/D2D_New_City.png)  
@@ -54,12 +55,15 @@ Walkthrough
     -   View All Countries / Cities    
 ![This is an image](/imgs/D2D_View_Countries.png)  
 ![This is an image](/imgs/D2D_View_Cities.png)  
+
     -   View One Country / City
 ![This is an image](/imgs/D2D_View_Country.png)  
 ![This is an image](/imgs/D2D_View_City.png)
+
     -   Edit Country / Cities  
 ![This is an image](/imgs/D2D_Update_City.png)  
 ![This is an image](/imgs/D2D_Update_Country.png)  
+  
     -   Delete city  
 
 Roadmap  
