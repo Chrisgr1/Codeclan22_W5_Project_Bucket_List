@@ -7,9 +7,7 @@ def new_country(country):
     sql = "INSERT INTO countries (country_name, continent, img_url, reason, reflection) VALUES (%s, %s, %s, %s, %s) returning *"
     # returning * or returning id - check this if error
     values = [country.country_name, country.continent, country.img_url, country.reason, country.reflection]
-    print(values)
     results = run_sql(sql, values)
-    print(results)
     id = results[0]['id']
     country.id=id
     return country
