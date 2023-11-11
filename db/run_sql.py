@@ -7,6 +7,12 @@ def run_sql(sql, values = None):
     
     try:
         conn=psycopg2.connect("dbname='bucket_list'")
+        conn=psycopg2.connect(
+            dbname='bucket list',
+            user='postgres',
+            password='password',
+            host='databsae'
+        )
         cur = conn.cursor(cursor_factory=ext.DictCursor)   
         cur.execute(sql, values)
         conn.commit()

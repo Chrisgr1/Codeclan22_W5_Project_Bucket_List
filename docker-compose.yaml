@@ -1,0 +1,13 @@
+services:
+  application:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+  ports:
+    - 8000:5000
+
+  database:
+    image: postgres
+    restart: always
+    environment:
+      - 
