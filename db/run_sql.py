@@ -23,11 +23,12 @@ def run_sql(sql, values = None):
 
     try:
         conn=psycopg2.connect(
-            dbname= pg_dbname,
-            user= pg_user,
+            host = pg_host,
             password = pg_password,
-            host = pg_host
+            dbname = pg_dbname,
+            user = pg_user,
         )
+        
         cur = conn.cursor(cursor_factory=ext.DictCursor)   
         cur.execute(sql, values)
         conn.commit()
