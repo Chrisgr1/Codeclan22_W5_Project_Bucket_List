@@ -1,0 +1,8 @@
+*
+
+!.flaskenv
+!requirements.txt
+!**/*.py
+!**/*.css
+!**/*.html
+!**/*.sql
