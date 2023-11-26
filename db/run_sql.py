@@ -20,15 +20,14 @@ def run_sql(sql, values = None):
     pg_dbname = 'bucket_list'
 
 
-
     try:
         conn=psycopg2.connect(
-            host = pg_host,
-            password = pg_password,
-            dbname = pg_dbname,
-            user = pg_user,
+            host=pg_host,
+            password=pg_password,
+            user=pg_user,
+            dbname=pg_dbname
         )
-        
+
         cur = conn.cursor(cursor_factory=ext.DictCursor)   
         cur.execute(sql, values)
         conn.commit()
