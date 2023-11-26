@@ -3,22 +3,20 @@ services:
     build:
       dockerfile: ./Dockerfile
       context: .
-  ports:
-    - 8000:5000
-
-# HOW FIND DOCS?
+    ports:
+      - 8080:5000
 
   database:
     image: postgres
     restart: always
     environment:
-      # POSTGRES_PASSWORD: password
-      # PGDATA: /var/lib/postgresql/data/PGDATA
-      # POSTGRES_DB: bucket_list
-      volumes: 
-        - ./data/postgres:/var/lib/postgres/data
-        - ./db/bucket_list.sql:/docker-entrypoint-initdb.d/init.sql
-      secrets:
+       POSTGRES_PASSWORD_FILE: /run/secrets/db-root-password
+       PGDATA: /var/lib/postgresql/data/PGDATA
+       POSTGRES_DB: bucket_list
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+      - ./db/bucket_list.sql:/docker-entrypoint-initdb.d/init.sql
+    secrets:
        - db-root-password
 
 secrets:
